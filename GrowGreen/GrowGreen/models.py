@@ -9,3 +9,5 @@ class Post(models.Model):
 	PAuthor=models.CharField(max_length=50)
 
 
+
+

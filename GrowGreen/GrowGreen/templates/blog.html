@@ -195,10 +195,12 @@
                         <div class="blog-posts">
                             <!--Blog Post Start-->
                             <div class="blog-post">
+                              {% for i in post %}
                                 <div class="blog-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img alt=""
                                         src="{% static 'images/blog/bf1.jpg' %}" /> </div>
                                 <div class="blog-txt">
-                                    <h3><a href="#">Awareness Campaign to Save &amp; Forest Planting</a></h3>
+                                 
+                                    <h3><a href="#">{{i.name}}</a></h3>
                                     <ul class="post-meta">
                                         <li> <a href="#"><i class="fas fa-user-circle"></i> John Ashley</a> </li>
                                         <li> <a href="#"><i class="fas fa-calendar-alt"></i> 29 September, 2018</a>
@@ -208,91 +210,14 @@
                                                 href="#">Trees</a>, <a href="#">Water</a>, <a href="#">Recycling</a>
                                         </li>
                                     </ul>
-                                    <p> The environment includes; the surface of the earth, natural re­sources, land and
-                                        water, mountains and plains, fertile lands and deserts, oceans, storms and
-                                        cy­clones, weather and climatic factors, seasons, etc. It also includes
-                                        biological conditions such as plants, animals with all their complexities. </p>
-                                    <a class="read-post" href="#">Read Post</a>
+                                    <p> {{i.discription}} </p>
+                                    <a class="read-post" href="/blog/blog_details/{{i.no}}">Read Post</a>
                                 </div>
                             </div>
+                            {%endfor%}
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
-                            <div class="blog-post">
-                                <div class="blog-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img alt=""
-                                        src="{% static 'images/blog/bf2.jpg' %}" /> </div>
-                                <div class="blog-txt">
-                                    <h3><a href="#">Fusce porttitor ex quis viverra interdum</a></h3>
-                                    <ul class="post-meta">
-                                        <li> <a href="#"><i class="fas fa-user-circle"></i> John Ashley</a> </li>
-                                        <li> <a href="#"><i class="fas fa-calendar-alt"></i> 29 September, 2018</a>
-                                        </li>
-                                        <li> <a href="#"><i class="fas fa-comments"></i> 134 Comments </a> </li>
-                                        <li class="post-tags"><i class="fas fa-tags"></i> <a href="#">Plant</a>, <a
-                                                href="#">Trees</a>, <a href="#">Water</a>, <a href="#">Recycling</a>
-                                        </li>
-                                    </ul>
-                                    <p> The environment includes; the surface of the earth, natural re­sources, land and
-                                        water, mountains and plains, fertile lands and deserts, oceans, storms and
-                                        cy­clones, weather and climatic factors, seasons, etc. It also includes
-                                        biological conditions such as plants, animals with all their complexities. </p>
-                                    <a class="read-post" href="#">Read Post</a>
-                                </div>
-                            </div>
-                            <!--Blog Post End-->
-                            <!--Blog Post Start-->
-                            <div class="blog-post">
-                                <div class="blog-slider">
-                                    <div class="owl-carousel owl-theme" id="bslider">
-                                        <div class="item"> <img alt="" src="{% static 'images/blog/bf4.jpg' %}" />
-                                        </div>
-                                        <div class="item"> <img alt="" src="{% static 'images/blog/bf3.jpg' %}" />
-                                        </div>
-                                        <div class="item"> <img alt="" src="{% static 'images/blog/bf2.jpg' %}" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="blog-txt">
-                                    <h3><a href="#">Nulla hendrerit neque ut eros blandit maximus</a></h3>
-                                    <ul class="post-meta">
-                                        <li> <a href="#"><i class="fas fa-user-circle"></i> John Ashley</a> </li>
-                                        <li> <a href="#"><i class="fas fa-calendar-alt"></i> 29 September, 2018</a>
-                                        </li>
-                                        <li> <a href="#"><i class="fas fa-comments"></i> 134 Comments </a> </li>
-                                        <li class="post-tags"><i class="fas fa-tags"></i> <a href="#">Plant</a>, <a
-                                                href="#">Trees</a>, <a href="#">Water</a>, <a href="#">Recycling</a>
-                                        </li>
-                                    </ul>
-                                    <p> The environment includes; the surface of the earth, natural re­sources, land and
-                                        water, mountains and plains, fertile lands and deserts, oceans, storms and
-                                        cy­clones, weather and climatic factors, seasons, etc. It also includes
-                                        biological conditions such as plants, animals with all their complexities. </p>
-                                    <a class="read-post" href="#">Read Post</a>
-                                </div>
-                            </div>
-                            <!--Blog Post End-->
-                            <!--Blog Post Start-->
-                            <div class="blog-post">
-                                <div class="blog-video">
-                                    <iframe src="https://player.vimeo.com/video/154852371"></iframe>
-                                </div>
-                                <div class="blog-txt">
-                                    <h3><a href="#">Sed dapibus dui vehicula neque varius finibus</a></h3>
-                                    <ul class="post-meta">
-                                        <li> <a href="#"><i class="fas fa-user-circle"></i> John Ashley</a> </li>
-                                        <li> <a href="#"><i class="fas fa-calendar-alt"></i> 29 September, 2018</a>
-                                        </li>
-                                        <li> <a href="#"><i class="fas fa-comments"></i> 134 Comments </a> </li>
-                                        <li class="post-tags"><i class="fas fa-tags"></i> <a href="#">Plant</a>, <a
-                                                href="#">Trees</a>, <a href="#">Water</a>, <a href="#">Recycling</a>
-                                        </li>
-                                    </ul>
-                                    <p> The environment includes; the surface of the earth, natural re­sources, land and
-                                        water, mountains and plains, fertile lands and deserts, oceans, storms and
-                                        cy­clones, weather and climatic factors, seasons, etc. It also includes
-                                        biological conditions such as plants, animals with all their complexities. </p>
-                                    <a class="read-post" href="#">Read Post</a>
-                                </div>
-                            </div>
+                            
                             <!--Blog Post End-->
                             <!--Blog Post Start-->
                             <div class="blog-post">
