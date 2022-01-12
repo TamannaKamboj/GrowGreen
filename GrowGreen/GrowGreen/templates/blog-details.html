@@ -1,150 +1,7 @@
+{%extends 'base.html'%}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="utf-8"/>
-      <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
-      <meta content="" name="description"/>
-      <meta content="" name="author"/>
-      <link href="{% static 'images/favicon.png' %}" rel="icon"/>
-      <title>ECO HTML</title>
-      <!-- CSS FILES START -->
-      <link href="{% static 'css/custom.css' %}" rel="stylesheet"/>
-      <link href="{% static 'css/color.css' %}" rel="stylesheet"/>
-      <link href="{% static 'css/responsive.css' %}" rel="stylesheet"/>
-      <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet"/>
-      <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"/>
-      <link href="{% static 'css/prettyPhoto.css' %}" rel="stylesheet"/>
-      <link href="{% static 'css/all.min.css' %}" rel="stylesheet"/>
-      <!-- CSS FILES End -->
-   </head>
-   <body>
-      <div class="wrapper">
-         <!--Header Start-->
-         <header class="header-style-2">
-            <nav class="navbar navbar-expand-lg">
-               <a class="navbar-brand" href="index-2.html"><img alt="" src="{% static 'images/h2logo.png' %}"/></a>
-               <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"> <i class="fas fa-bars"></i> </button>
-               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-                     <li class="nav-item dropdown">
-                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="index-2.html" role="button"> Home </a>
-                        <ul class="dropdown-menu">
-                           <li><a href="index-2.html">Home One</a></li>
-                           <li><a href="home-two.html">Home Two</a></li>
-                           <li><a href="home-three.html">Home Three</a></li>
-                        </ul>
-                     </li>
-                     <li class="nav-item"> <a class="nav-link" href="about.html">About</a> </li>
-                     <li class="nav-item dropdown">
-                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="events-grid.html" role="button"> Events </a>
-                        <ul class="dropdown-menu">
-                           <li><a href="events-grid.html">Events Grid</a></li>
-                           <li><a href="events-grid-2.html">Events Grid Two</a></li>
-                           <li><a href="events-grid-3.html">Events Grid Three</a></li>
-                           <li><a href="events-list.html">Events List</a></li>
-                           <li><a href="events-list-two.html">Events List Two</a></li>
-                           <li><a href="event-details.html">Event Details</a></li>
-                        </ul>
-                     </li>
-                     <li class="nav-item dropdown">
-                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="causes.html" role="button"> Causes </a>
-                        <ul class="dropdown-menu">
-                           <li><a href="causes.html">Causes Grid</a></li>
-                           <li><a href="causes-list.html">Causes List</a></li>
-                           <li><a href="causes-details.html">Causes Details</a> </li>
-                        </ul>
-                     </li>
-                     <li class="nav-item dropdown">
-                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="blog.html" role="button"> Blogs </a>
-                        <ul class="dropdown-menu">
-                           <li><a href="blog.html">Blog Default</a></li>
-                           <li><a href="blog-list.html">Blog List</a> </li>
-                           <li><a href="blog-grid.html">Blog Grid</a></li>
-                           <li><a href="blog-two-col.html">Blog Two Columns</a> </li>
-                           <li><a href="blog-three-col.html">Blog Three Columns</a></li>
-                           <li><a href="blog-details.html">Blog Details</a></li>
-                        </ul>
-                     </li>
-                     <li class="nav-item dropdown">
-                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"> Pages </a>
-                        <ul class="dropdown-menu">
-                           <li>
-                              <a href="#">Projects</a>
-                              <ul class="dropdown-menu">
-                                 <li><a href="projects.html">Projects</a> </li>
-                                 <li><a href="projects-grid.html">Projects Grid</a> </li>
-                                 <li><a href="projects-grid-two.html">Projects Grid Two</a> </li>
-                                 <li><a href="projects-list.html">Projects List</a> </li>
-                                 <li><a href="projects-details.html">Project Details</a> </li>
-                              </ul>
-                           </li>
-                           <li>
-                              <a href="#">Shop</a>
-                              <ul class="dropdown-menu">
-                                 <li><a href="shop.html">Shop</a> </li>
-                                 <li><a href="shop-two.html">Shop Two</a> </li>
-                                 <li><a href="shop-details.html">Shop Details</a> </li>
-                              </ul>
-                           </li>
-                           <li>
-                              <a href="team.html">Team</a>
-                              <ul class="dropdown-menu">
-                                 <li><a href="team.html">Team One</a> </li>
-                                 <li><a href="team-two.html">Team Two</a> </li>
-                                 <li><a href="team-details.html">Team Details</a> </li>
-                              </ul>
-                           </li>
-                           <li>
-                              <a href="#">Gallery</a>
-                              <ul class="dropdown-menu">
-                                 <li><a href="gallery-grid.html">Gallery Grid</a> </li>
-                                 <li><a href="gallery-full.html">Gallery Full</a> </li>
-                                 <li><a href="gallery-masonry.html">Gallery Masonry</a> </li>
-                              </ul>
-                           </li>
-                           <li><a href="testimonials.html">Testimonials</a> </li>
-                           <li><a href="donation.html">Donation</a> </li>
-                           <li><a href="my-account.html">My Account</a> </li>
-                           <li><a href="coming-soon.html">Coming Soon</a> </li>
-                           <li><a href="page-404.html">404 Error</a> </li>
-                        </ul>
-                     </li>
-                     <li class="nav-item dropdown">
-                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="contact.html" role="button"> Contact </a>
-                        <ul class="dropdown-menu">
-                           <li><a href="contact-one.html">Contact One</a> </li>
-                           <li><a href="contact-two.html">Contact Two</a> </li>
-                        </ul>
-                     </li>
-                  </ul>
-                  <ul class="topnav-right">
-                     <li> <a class="mdonate" href="donation.html"><span>Make a Donation</span></a> </li>
-                     <li> <a class="search-icon" href="#search"> <i class="fas fa-search"></i> </a> </li>
-                     <li class="dropdown">
-                        <a class="cart-icon" data-toggle="dropdown" href="#" id="cartdropdown" role="button"> <i class="fas fa-shopping-cart"></i></a>
-                        <div aria-labelledby="cartdropdown" class="dropdown-menu cart-box">
-                           Recently added item(s)
-                           <ul class="list">
-                              <li class="item">
-                                 <a class="preview-image" href="#"><img alt="" class="preview" src="{% static 'images/pro.jpg' %}"/></a>
-                                 <div class="description"> <a href="#">Sample Course</a> <strong class="price">1 x $44.95</strong> </div>
-                              </li>
-                              <li class="item">
-                                 <a class="preview-image" href="#"><img alt="" class="preview" src="{% static 'images/pro.jpg' %}"/></a>
-                                 <div class="description"> <a href="#">Sample Course</a> <strong class="price">1 x $44.95</strong> </div>
-                              </li>
-                           </ul>
-                           <div class="total">Total: <strong>$44.95</strong></div>
-                           <div class="view-link"><a href="#">Proceed to Checkout</a> <a href="#">View cart </a></div>
-                        </div>
-                     </li>
-                     <li class="login-reg"> <a href="my-account.html">Login</a> | <a href="my-account.html">Signup</a> </li>
-                  </ul>
-               </div>
-            </nav>
-         </header>
-         <div id="search">
+{% block body %}
+        <div id="search">
             <button class="close" type="button">×</button>
             <form class="search-overlay-form">
                <input placeholder="type keyword(s) here" type="search" value=""/>
@@ -155,11 +12,11 @@
          <!--Inner Header Start-->
          <section class="wf100 p100 inner-header">
             <div class="container">
-               <h1>Awareness Campaign</h1>
+               <h1>{{post_details.author}}</h1>
                <ul>
                   <li><a href="#">Home</a></li>
                   <li><a href="#"> Blogs </a></li>
-                  <li><a href="#">Awareness Campaign to Save &amp; Forest Planting</a></li>
+                  
                </ul>
             </div>
          </section>
@@ -174,35 +31,40 @@
                         <div class="blog-single-content">
                            
                          
-                           <div class="blog-single-thumb"><img alt="" src="{% static 'images/blog/bf4.jpg' %}"/></div>
-                           <h3>{{post_details.name}}</h3>
+                           <div class="blog-single-thumb"><img alt="" src="/media/{{post_details.thumbnail}}"/></div>
+                           <h3>{{post_details.title}}</h3>
                            <ul class="post-meta">
-                              <li><i class="fas fa-user-circle"></i> John Ashley</li>
-                              <li><i class="fas fa-calendar-alt"></i> 29 September, 2018</li>
-                              <li><i class="fas fa-comments"></i> 134 Comments</li>
-                              <li class="tags"><i class="fas fa-tags"></i> <a href="#">Plant</a> <a href="#">Trees</a> <a href="#">Water</a> <a href="#">Recycling</a></li>
+                              <li><i class="fas fa-user-circle"></i>{{post_details.author}}</li>
+                              <li><i class="fas fa-calendar-alt"></i> {{post_details.timestamp}}</li>
+                              <li><i class="fas fa-comments"></i>{{comments| length}}</li>
+                              
+                              <li class="tags"><i class="fas fa-tags"></i> 
+                                 {% for tag in tags %}
+                                 <a href="#">{{tag.tag}}</a>
+                                 {% endfor %}
+                              </li>
                            </ul>
-                           <p> {{post_details.discription}}</p>
-                           <p>{{post_details.content}} </p>
+                           <p> {{post_details.brief_description}}</p>
+                           <p>{{post_details.content|safe}} </p>
                             
-                           <ul class="small-gallery">
+                           {% comment %} <ul class="small-gallery">
                               <li> <img alt="" src="{% static 'images/blog/bsmall1.jpg' %}"/> </li>
                               <li> <img alt="" src="{% static 'images/blog/bsmall2.jpg' %}"/> </li>
                               <li> <img alt="" src="{% static 'images/blog/bsmall3.jpg' %}"/> </li>
-                           </ul>
+                           </ul> {% endcomment %}
                           
                            <!--Post Tags Start-->
-                           <div class="single-post-tags wf100"> <a href="#">Solar Energy</a> <a href="#"> Plant Ecology </a> <a href="#"> Wildlife </a> <a href="#"> Eco Ideas </a> <a href="#"> Waste Management </a> <a href="#"> Water </a> <a href="#"> Forest Planting </a> <a href="#"> Donation </a> <a href="#"> Wind Energy </a> <a href="#"> Recycling </a> </div>
+                           {% comment %} <div class="single-post-tags wf100"> <a href="#">Solar Energy</a> <a href="#"> Plant Ecology </a> <a href="#"> Wildlife </a> <a href="#"> Eco Ideas </a> <a href="#"> Waste Management </a> <a href="#"> Water </a> <a href="#"> Forest Planting </a> <a href="#"> Donation </a> <a href="#"> Wind Energy </a> <a href="#"> Recycling </a> </div> {% endcomment %}
                            <!--Post Tags End-->
                            <!--Author Box Start-->
-                           <div class="author-box wf100">
+                           {% comment %} <div class="author-box wf100">
                               <img alt="" src="{% static 'images/auser.jpg' %}"/>
                               <h5>About Post Author</h5>
                               <p> Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibe saepe eveniet ut et voluptates repudiandae sint et molestiaerecusanda Itaque earum rerum hic tenetur a sapien delectus, ut aut reiciendis. </p>
-                           </div>
+                           </div> {% endcomment %}
                            <!--Author Box End-->
                            <!--Author Comments Start-->
-                           <div class="post-comments wf100">
+                           {% comment %} <div class="post-comments wf100">
                               <h4>Comments on Post</h4>
                               <ul class="comments">
                                  <!--Comment Start-->
@@ -260,47 +122,16 @@
                                  </li>
                                  <!--Comment End-->
                               </ul>
-                           </div>
+                           </div> {% endcomment %}
+                           {% if user.is_authenticated %}
+                                {% include "comment.html"%}
+                            {% endif %}
                            <!--Author Comments End-->
                            <!--Related Posts Start-->
-                           <div class="wf100 related-posts">
-                              <h4>Related Posts</h4>
-                              <ul>
-                                 <li>
-                                    <div class="rp-box">
-                                       <h6> <a href="#">Social innovation of nonprofit, think tank, outcome to donate</a> </h6>
-                                       <ul class="post-meta">
-                                          <li> <a href="#"><i class="fas fa-calendar-alt"></i> 29 September, 2018</a> </li>
-                                          <li> <a href="#"><i class="fas fa-comments"></i> 134 Comments </a> </li>
-                                          <li> <a href="#"><i class="fas fa-share-alt"></i> 206 Share </a> </li>
-                                       </ul>
-                                    </div>
-                                 </li>
-                                 <li>
-                                    <div class="rp-box">
-                                       <h6> <a href="#">Social innovation of nonprofit, think tank, outcome to donate</a> </h6>
-                                       <ul class="post-meta">
-                                          <li> <a href="#"><i class="fas fa-calendar-alt"></i> 29 September, 2018</a> </li>
-                                          <li> <a href="#"><i class="fas fa-comments"></i> 134 Comments </a> </li>
-                                          <li> <a href="#"><i class="fas fa-share-alt"></i> 206 Share </a> </li>
-                                       </ul>
-                                    </div>
-                                 </li>
-                                 <li>
-                                    <div class="rp-box">
-                                       <h6> <a href="#">Social innovation of nonprofit, think tank, outcome to donate</a> </h6>
-                                       <ul class="post-meta">
-                                          <li> <a href="#"><i class="fas fa-calendar-alt"></i> 29 September, 2018</a> </li>
-                                          <li> <a href="#"><i class="fas fa-comments"></i> 134 Comments </a> </li>
-                                          <li> <a href="#"><i class="fas fa-share-alt"></i> 206 Share </a> </li>
-                                       </ul>
-                                    </div>
-                                 </li>
-                              </ul>
-                           </div>
+                        
                            <!--Related Posts End-->
                            <!--Leave a Comment Start-->
-                           <div class="wf100 comment-form">
+                           {% comment %} <div class="wf100 comment-form">
                               <h4>Leave a Comment</h4>
                               <ul>
                                  <form action="/blog/comment" method="post">
@@ -313,7 +144,7 @@
                                     </form>
                               </ul>
                               
-                           </div>
+                           </div> {% endcomment %}
                            <!--Leave a Comment End-->
                         </div>
                         <!--Blog Single Content End-->
@@ -325,26 +156,29 @@
                            <div class="side-widget">
                               <h5>Search</h5>
                               <div class="side-search">
-                                 <form>
-                                    <input class="form-control" placeholder="Search" type="search"/>
-                                    <button><i class="fas fa-search"></i></button>
+                                 <form id="form-submit-js" action="{% url 'search' %}">
+                                    {%csrf_token%}
+                                    <input class="form-control" name="search" placeholder="Search" type="search"/>
+                                    <button type="submit" id="f-submit"><i class="fas fa-search"></i></button>
                                  </form>
                               </div>
                            </div>
+                           <script>
+                        
+                          </script>
                            <!--Widget End-->
                            <!--Widget Start-->
-                           <div class="side-widget text-widget">
-                              <h5>Text Widget</h5>
-                              <p> We are Ecova: eco &amp; environmental community. We need your support and help to Stop Globar Warning. Few generations ago it to seemed like world’s resources were infinite, and the people needed only to access them to create business, Lorem ipsum dolor it amet consect adipiscing. </p>
-                           </div>
+                           
                            <!--Widget End-->
                            <!--Widget Start-->
                            <div class="side-widget">
-                              <h5>News &amp; Articles</h5>
+                              
+                              <h5>Recent Articles</h5>
                               <ul class="lastest-products">
-                                 <li> <img alt="" src="{% static 'images/flp1.jpg' %}"/> <strong><a href="#">How you can keep alive wild animals for...</a></strong> <span class="pdate"><i class="fas fa-calendar-alt"></i> 29 September, 2018</span> </li>
-                                 <li> <img alt="" src="{% static 'images/flp2.jpg' %}"/> <strong><a href="#">Eliminate your plastic bottle pollution</a></strong> <span class="pdate"><i class="fas fa-calendar-alt"></i> 29 September, 2018</span> </li>
-                                 <li> <img alt="" src="{% static 'images/flp3.jpg' %}"/> <strong><a href="#">How you can keep alive wild animals for...</a></strong> <span class="pdate"><i class="fas fa-calendar-alt"></i> 29 September, 2018</span> </li>
+                                 {% for recent_post in recent_posts|slice:':4' %}
+                                 <li> <img alt="" src="{{recent_post.thumbnail}}"/> <strong><a href="#">{{recent_post.title}}...</a></strong> <span class="pdate"><i class="fas fa-calendar-alt"></i>{{recent_post.timestamp}}</span> </li>
+                                 
+                                 {%endfor%}
                               </ul>
                            </div>
                            <!--Widget Start-->
@@ -367,7 +201,11 @@
                            <!--Widget Start-->
                            <div class="side-widget">
                               <h5>Tags</h5>
-                              <div class="single-post-tags"> <a href="#">Solar Energy</a> <a href="#"> Plant Ecology </a> <a href="#"> Wildlife </a> <a href="#"> Eco Ideas </a> <a href="#"> Waste Management </a> <a href="#"> Water </a> <a href="#"> Forest Planting </a> <a href="#"> Donation </a> <a href="#"> Wind Energy </a> <a href="#"> Recycling </a> </div>
+                              <div class="single-post-tags"> 
+                                 {% for tg in tags %}
+                                 <a href="#">{{tg.tag}}</a> 
+                              </div>
+                                 {%endfor%}
                            </div>
                            <!--Widget End-->
                            <!--Widget Start-->
@@ -436,78 +274,7 @@
                            </div>
                            <!--Widget End-->
                            <!--Widget Start-->
-                           <div class="side-widget side-volunteer-form">
-                              <h5>Become a Volunteer</h5>
-                              <ul>
-                                 <li>
-                                    <input aria-label="Your Name" class="form-control" placeholder="Your Name" type="text"/>
-                                 </li>
-                                 <li>
-                                    <input aria-label="Email Address" class="form-control" placeholder="Email Address" type="text"/>
-                                 </li>
-                                 <li>
-                                    <input aria-label="Contact" class="form-control" placeholder="Contact" type="text"/>
-                                 </li>
-                                 <li>
-                                    <input class="fsubmit" type="submit" value="Signup to Join us Now"/>
-                                 </li>
-                              </ul>
-                           </div>
-                           <!--Widget End-->
-                           <!--Widget Start-->
-                           <div class="side-widget">
-                              <div class="donation-amount">
-                                 <h5>Make a Donation</h5>
-                                 <form>
-                                    <ul class="radio-boxes">
-                                       <li>
-                                          <div class="radio custom">
-                                             <input class="css-radio" id="d1" name="donation" type="radio"/>
-                                             <label class="css-label" for="d1">$5</label>
-                                          </div>
-                                       </li>
-                                       <li>
-                                          <div class="radio custom">
-                                             <input class="css-radio" id="d2" name="donation" type="radio"/>
-                                             <label class="css-label" for="d2">$20</label>
-                                          </div>
-                                       </li>
-                                       <li>
-                                          <div class="radio custom">
-                                             <input class="css-radio" id="d3" name="donation" type="radio"/>
-                                             <label class="css-label" for="d3">$50</label>
-                                          </div>
-                                       </li>
-                                       <li>
-                                          <div class="radio custom">
-                                             <input class="css-radio" id="d4" name="donation" type="radio"/>
-                                             <label class="css-label" for="d4">$100</label>
-                                          </div>
-                                       </li>
-                                       <li>
-                                          <div class="radio custom">
-                                             <input class="css-radio" id="d5" name="donation" type="radio"/>
-                                             <label class="css-label" for="d5">$250</label>
-                                          </div>
-                                       </li>
-                                       <li>
-                                          <div class="radio custom">
-                                             <input class="css-radio" id="d6" name="donation" type="radio"/>
-                                             <label class="css-label" for="d6">$500</label>
-                                          </div>
-                                       </li>
-                                       <li class="last-input">
-                                          <div class="inputs">
-                                             <input class="enter" placeholder="Enter other amout $ " type="text"/>
-                                          </div>
-                                       </li>
-                                       <li class="form-submit">
-                                          <button type="submit">Continue to Donate</button>
-                                       </li>
-                                    </ul>
-                                 </form>
-                              </div>
-                           </div>
+                         
                            <!--Widget End-->
                         </div>
                      </div>
@@ -516,113 +283,11 @@
                </div>
             </div>
          </section>
+         <script>
+            document.getElementById('f-submit').onclick = function(){
+                document.getElementById('form-submit-js').submit();
+            }
+        </script>
          <!--Blog End-->
          <!--Footer Start-->
-         <footer class="footer">
-            <div class="footer-top wf100">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-lg-3 col-md-6 col-sm-6">
-                        <!--Footer Widget Start-->
-                        <div class="footer-widget">
-                           <h4>About Ecova</h4>
-                           <p> If anything’s hot in today’s economy, it’s saving money, including a broad range of green businesses helping people save energy, water, and other resources. Definitely, you can go with this business as it is a nothing but the future. </p>
-                           <a class="lm" href="#">About us</a>
-                        </div>
-                        <!--Footer Widget End-->
-                     </div>
-                     <div class="col-lg-3 col-md-6 col-sm-6">
-                        <!--Footer Widget Start-->
-                        <div class="footer-widget">
-                           <h4>Our Promises</h4>
-                           <ul class="quick-links">
-                              <li><a href="#">Solar Energy</a></li>
-                              <li><a href="#">Waste Management</a></li>
-                              <li><a href="#">Eco Ideas</a></li>
-                              <li><a href="#">Recycling Materials</a></li>
-                              <li><a href="#">Plant Ecology</a></li>
-                              <li><a href="#">Saving Wildlife </a></li>
-                           </ul>
-                        </div>
-                        <!--Footer Widget End-->
-                     </div>
-                     <div class="col-lg-3 col-md-6 col-sm-6">
-                        <!--Footer Widget Start-->
-                        <div class="footer-widget">
-                           <h4>Latest Posts</h4>
-                           <ul class="lastest-products">
-                              <li> <img alt="" src="{% static 'images/flp1.jpg' %}"/> <strong><a href="#">How you can keep alive wild animals for...</a></strong> <span class="pdate"><i>Posted:</i> 29 September, 2018</span> </li>
-                              <li> <img alt="" src="{% static 'images/flp2.jpg' %}"/> <strong><a href="#">Eliminate your plastic bottle pollution &amp; keep...</a></strong> <span class="pdate"><i>Posted:</i> 29 September, 2018</span> </li>
-                              <li> <img alt="" src="{% static 'images/flp3.jpg' %}"/> <strong><a href="#">How you can keep alive wild animals for...</a></strong> <span class="pdate"><i>Posted:</i> 29 September, 2018</span> </li>
-                           </ul>
-                        </div>
-                        <!--Footer Widget End-->
-                     </div>
-                     <div class="col-lg-3 col-md-6 col-sm-6">
-                        <!--Footer Widget Start-->
-                        <div class="footer-widget">
-                           <div class="owl-carousel owl-theme" id="fpro-slider">
-                              <!--Footer Product Start-->
-                              <div class="item">
-                                 <div class="f-product">
-                                    <img alt="" src="{% static 'images/fpro1.jpg' %}"/>
-                                    <div class="fp-text">
-                                       <h6><a href="#">Buy T-Shirts</a></h6>
-                                       <strong>$19.00</strong>
-                                    </div>
-                                 </div>
-                              </div>
-                              <!--Footer Product End-->
-                              <!--Footer Product Start-->
-                              <div class="item">
-                                 <div class="f-product">
-                                    <img alt="" src="{% static 'images/fpro1.jpg' %}"/>
-                                    <div class="fp-text">
-                                       <h6><a href="#">Buy T-Shirts</a></h6>
-                                       <strong>$19.00</strong>
-                                    </div>
-                                 </div>
-                              </div>
-                              <!--Footer Product End-->
-                              <!--Footer Product Start-->
-                              <div class="item">
-                                 <div class="f-product">
-                                    <img alt="" src="{% static 'images/fpro1.jpg' %}"/>
-                                    <div class="fp-text">
-                                       <h6><a href="#">Buy T-Shirts</a></h6>
-                                       <strong>$19.00</strong>
-                                    </div>
-                                 </div>
-                              </div>
-                              <!--Footer Product End-->
-                           </div>
-                        </div>
-                        <!--Footer Widget End-->
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="footer-copyr wf100">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-4 col-sm-4"> <img alt="" src="{% static 'images/logo.png' %}"/> </div>
-                     <div class="col-md-8 col-sm-8">
-                        <p><a href="https://www.templateshub.net" target="_blank">Templates Hub</a></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </footer>
-         <!--Footer End-->
-      </div>
-      <!--   JS Files Start  -->
-      <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
-      <script src="{% static 'js/jquery-migrate-1.4.1.min.js' %}"></script>
-      <script src="{% static 'js/popper.min.js' %}"></script>
-      <script src="{% static 'js/bootstrap.min.js' %}"></script>
-      <script src="{% static 'js/owl.carousel.min.js' %}"></script>
-      <script src="{% static 'js/jquery.prettyPhoto.js' %}"></script>
-      <script src="{% static 'js/isotope.min.js' %}"></script>
-      <script src="{% static 'js/custom.js' %}"></script>
-   </body>
-</html>
+       {% endblock %}

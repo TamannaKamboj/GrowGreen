@@ -16,17 +16,24 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from . import views
-
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('blog/', include('blogs.urls')),
+    path('forum/', include('forum.urls')),
+    path('chat/', include('chatv2.urls')),
     path('admin/', admin.site.urls),
     path("",views.home,name="home"),
     #path("blogs",views.blog,name="blog"),
     #path("blog_details",views.blog_details,name="blog_details"),
     path("contact",views.contact,name="contact"),
     path("about", views.about, name="about"),
-    path('login', views.login, name='login'),
+    path('login', views.user_login, name='login'),
     path('signup', views.signup, name='signup'),
+    path('logout', views.signof, name='logout'),
     
-]
+
+
+    
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

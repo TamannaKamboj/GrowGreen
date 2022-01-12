@@ -431,10 +431,11 @@
                      <div aria-labelledby="wildlife-tab" class="tab-pane fade show active" id="wildlife"
                         role="tabpanel">
                         <div class="cpro-slider owl-carousel owl-theme">
+                           {% for  project in current_proj%}
                            <!--Pro Box-->
                            <div class="item">
                               <div class="pro-box">
-                                 <img alt="" src="{% static 'images/current-pro1.jpg' %}" />
+                                 <img alt="" src="/media/{{project.thumbnail}}" />
                                  <h5>Forest &amp; Tree Planting</h5>
                                  <div class="pro-hover">
                                     <h6>Forest &amp; Tree Planting</h6>
