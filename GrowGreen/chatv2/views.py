@@ -92,3 +92,7 @@ def create_chat(request, id):
 
     # Chat(participant = )
     return HttpResponse("done")
+
+
+def chat_new(request):
+    return render(request, 'chat/chat_new.html')
