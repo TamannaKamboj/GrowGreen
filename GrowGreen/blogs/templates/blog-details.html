@@ -176,7 +176,7 @@
                               <h5>Recent Articles</h5>
                               <ul class="lastest-products">
                                  {% for recent_post in recent_posts|slice:':4' %}
-                                 <li> <img alt="" src="{{recent_post.thumbnail}}"/> <strong><a href="#">{{recent_post.title}}...</a></strong> <span class="pdate"><i class="fas fa-calendar-alt"></i>{{recent_post.timestamp}}</span> </li>
+                                 <li> <img alt="" src="{{recent_post.thumbnail}}"/> <strong><a href="{% url 'blog_details' recent_post.sno%}">{{recent_post.title}}...</a></strong> <span class="pdate"><i class="fas fa-calendar-alt"></i>{{recent_post.timestamp}}</span> </li>
                                  
                                  {%endfor%}
                               </ul>
@@ -212,18 +212,20 @@
                            <div class="side-widget">
                               <h5>Recent Work</h5>
                               <div class="owl-carousel owl-theme" id="side-slider">
-                                 <!--Item Start-->
-                                 <div class="item">
-                                    <div class="pro-box">
-                                       <img alt="" src="{% static 'images/current-pro5.jpg' %}"/>
-                                       <h5>Forest &amp; Tree Planting</h5>
-                                       <div class="pro-hover">
-                                          <h6>Forest &amp; Tree Planting</h6>
-                                          <p>We are working over 20 years on Waste Management &amp; Material Recycling Projects.</p>
-                                          <a href="#">Read More</a>
-                                       </div>
-                                    </div>
-                                 </div>
+                                  {% for i in recent %}
+                                  <!--Item Start-->
+                                  <div class="item">
+                                      <div class="pro-box"> <img alt=""
+                                              src="/media/{{i.img}}" />
+                                          <!-- <h5>Forest &amp; Tree Planting</h5> -->
+                                          <div class="pro-hover">
+                                              <!-- <h6>Forest &amp; Tree Planting</h6> -->
+                                              <p>{{i.text}}</p>
+                                              <!-- <a href="#">Read More</a> -->
+                                          </div>
+                                      </div>
+                                  </div>
+                                  {%endfor%}
                                  <!--Item End-->
                                  <!--Item Start-->
                                  <div class="item">
@@ -255,7 +257,7 @@
                            </div>
                            <!--Widget End-->
                            <!--Widget Start-->
-                           <div class="side-widget archives">
+                           <!-- <div class="side-widget archives">
                               <h5>Archives</h5>
                               <ul>
                                  <li><a href="#"> November 2018</a></li>
@@ -271,7 +273,7 @@
                                  <li><a href="#"> January 2018</a></li>
                                  <li><a href="#"> December 2017</a></li>
                               </ul>
-                           </div>
+                           </div> -->
                            <!--Widget End-->
                            <!--Widget Start-->
                          
