@@ -33,7 +33,7 @@ class ForumComment(models.Model):
     subject = models.CharField(max_length=69, null=True)
     message = models.TextField()
     post = models.ForeignKey(ForumPost, on_delete=models.CASCADE)
-    parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True)# subcomments
+    parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True) # subcomments
     timestamp = models.DateTimeField(default=datetime.datetime.now())
     # comment = models.TextField()
     # user = models.ForeignKey(User, on_delete=models.CASCADE)

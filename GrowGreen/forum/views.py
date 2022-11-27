@@ -13,8 +13,10 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from django.contrib.auth import authenticate, get_user_model, login, logout
 # Create your views here.
-def test(request):
+def forum(request):
     posts = ForumPost.objects.all()
+	# comments = ForumComment.object.filter(post = posts)
+	# posts.
     return render(request, 'forum.html',{'posts':posts})
 
 
