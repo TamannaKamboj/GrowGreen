@@ -12,4 +12,7 @@ urlpatterns = [
     path('test/<str:room_name>/', views.test, name='test'),
 
     path('create_chat/<int:id>', views.create_chat, name='create-chat'),
+
+
+    path('chat_new', views.chat_new),
 ]

@@ -35,7 +35,7 @@ def comments(request):
 		comment=request.POST.get('comment')
 		obj=Comment(comment1=comment,user=request.user)
 		obj.save() 
-		print("cvhvhbjnknkhbhkjbkjv")
+		# print("cvhvhbjnknkhbhkjbkjv")
 	return render(request,'blog.html')
 
 
@@ -48,7 +48,7 @@ def blog_post(request, post_id):
 		subject = request.POST.get('subject')
 		message = request.POST.get('message')
 		post = Post.objects.filter(sno = post_id).first()
-		obj=Comment(user = user, message = message, subject=subject, post=post, timestamp = datetime.datetime.strptime('2021-09-09 00:00:00','%Y-%m-%d %H:%M:%S'))
+		obj=Comment(user = user, message = message, subject=subject, post=post)
 		obj.save()
 		email = user.email
 		send_mail(
@@ -77,6 +77,8 @@ def blog_post(request, post_id):
 
 	post = Post.objects.filter(sno = post_id).first()
 	recent_posts = Post.objects.all()[:4:-1]
+	recent = RecentWork.objects.all()
+
 	
 	tags = Tags.objects.filter(post=post)
 	comments = Comment.objects.filter(post = post, parent=None)
@@ -90,7 +92,7 @@ def blog_post(request, post_id):
 			repliesdict[i.parent].append(i)
 
 	print(repliesdict)
-	return render(request, 'blog-details.html', {'post_details':post, 'recent_posts':recent_posts, 'comments':comments, 'repliesdict':repliesdict, 'tags':tags})
+	return render(request, 'blog-details.html', {'post_details':post, 'recent_posts':recent_posts, 'recent':recent, 'comments':comments, 'repliesdict':repliesdict, 'tags':tags})
 
 
 def search_tag(request):

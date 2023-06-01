@@ -39,7 +39,7 @@
                                             <li> <a href="#"><i class="fas fa-user-circle"></i>{{post.author}}</a> </li>
                                             <li> <a href="#"><i class="fas fa-calendar-alt"></i>{{post.timestamp}}</a>
                                             </li>
-                                            <li> <a href="#"><i class="fas fa-comments"></i> 134 Comments </a> </li>
+                                            <li> <a href="#"><i class="fas fa-comments"></i>  </a> </li>
                                             <!-- <li class="post-tags"><i class="fas fa-tags"></i> <a href="#">Plant</a>, <a
                                                     href="#">Trees</a>, <a href="#">Water</a>, <a href="#">Recycling</a>
                                             </li> -->
@@ -90,16 +90,17 @@
                             <div class="side-widget">
                                 <h5>Blogs &amp; Articles</h5>
                                 <ul class="lastest-products">
-                                    <li> <img alt="" src="{% static 'images/flp1.jpg' %}" /> <strong><a href="#">How you
-                                                can keep alive wild animals for...</a></strong> <span class="pdate"><i
-                                                class="fas fa-calendar-alt"></i> 29 September, 2018</span> </li>
-                                    <li> <img alt="" src="{% static 'images/flp2.jpg' %}" /> <strong><a
+                                    {% for blogs in blogposts %}
+                                    <li> <img alt="" src="{% static 'images/flp1.jpg' %}" /> <strong><a href="{% url 'blog_details' blogs.sno%}">{{blogs.title}}</a></strong> <span class="pdate"><i
+                                                class="fas fa-calendar-alt"></i>{{blogs.timestamp}}</span> </li>
+                                    <!-- <li> <img alt="" src="{% static 'images/flp2.jpg' %}" /> <strong><a
                                                 href="#">Eliminate your plastic bottle pollution</a></strong> <span
                                             class="pdate"><i class="fas fa-calendar-alt"></i> 29 September, 2018</span>
                                     </li>
                                     <li> <img alt="" src="{% static 'images/flp3.jpg' %}" /> <strong><a href="#">How you
                                                 can keep alive wild animals for...</a></strong> <span class="pdate"><i
-                                                class="fas fa-calendar-alt"></i> 29 September, 2018</span> </li>
+                                                class="fas fa-calendar-alt"></i> 29 September, 2018</span> </li> -->
+                                    {% endfor %}
                                 </ul>
                             </div>
                             <!--Widget Start-->

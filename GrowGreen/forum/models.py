@@ -16,9 +16,9 @@ class ForumPost(models.Model):
     content = models.TextField()
     author = models.ForeignKey(User, on_delete =models.CASCADE)
     # slug = models.CharField(max_length=130)
-    timestamp = models.DateTimeField(blank=True, default=datetime.datetime.now())
+    timestamp = models.DateTimeField(blank=False, default=datetime.datetime.now())
     thumbnail = models.ImageField('thumbnails')
-    # tags = models.ManyToManyField(Tags)
+    tags = models.ManyToManyField(Tags)
 
     def __str__(self):
         return str(self.timestamp) +' '+ 'by' + '   @'+self.author.username
@@ -33,7 +33,7 @@ class ForumComment(models.Model):
     subject = models.CharField(max_length=69, null=True)
     message = models.TextField()
     post = models.ForeignKey(ForumPost, on_delete=models.CASCADE)
-    parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True)# subcomments
+    parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True) # subcomments
     timestamp = models.DateTimeField(default=datetime.datetime.now())
     # comment = models.TextField()
     # user = models.ForeignKey(User, on_delete=models.CASCADE)

@@ -49,6 +49,7 @@ class ChatConsumer(WebsocketConsumer):
     def fetch_messages(self, data):
         # print('fetch')
         # cont = Contact.objects.filter(user = self.scope['user']).first()
+        print("idhar aya")
         print(data['id'])
         
         obj = Chat.objects.filter(id = data['id']).first()
@@ -143,6 +144,7 @@ class ChatConsumer(WebsocketConsumer):
 
 
     def connect(self):
+        print("idhar aya")
         self.room_name = self.scope['url_route']['kwargs']['room_name']
         self.room_group_name = 'chat_%s' % self.room_name
 
