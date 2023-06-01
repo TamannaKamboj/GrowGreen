@@ -19,8 +19,7 @@
    <link href="{% static 'css/prettyPhoto.css' %}" rel="stylesheet" />
    <link href="{% static 'css/all.min.css' %}" rel="stylesheet" />
    <!-- CSS FILES End -->
-   <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-
+<script src="https://code.jquery.com/jquery-3.6.3.slim.js" integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -134,12 +133,36 @@
                     <!-- <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
                     data-toggle="dropdown" href="{%url 'contact'%}" role="button"> Contact </a> -->
                     <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                        href="{%url 'test0'%}" role="button"><i class="fa fa-comment"></i>  Chat </a>
+                   
+                </li>
+                <li class="nav-item dropdown">
+                    <!-- <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" href="{%url 'contact'%}" role="button"> Contact </a> -->
+                    <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
                         href="{%url 'contact'%}" role="button"><i class="far fa-address-book"></i>  Contact </a>
                    
                 </li>
+                {% if not user.is_authenticated %}
+                <li class="nav-item dropdown">
+                    <!-- <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" href="{%url 'contact'%}" role="button"> Contact </a> -->
+                    <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                        href="{%url 'login'%}" role="button"><i class="far fa-address-book"></i>  Login </a>
+                   
+                </li>
+                {% else %}
+                <li class="nav-item dropdown">
+                    <!-- <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" href="{%url 'contact'%}" role="button"> Contact </a> -->
+                    <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                        href="{%url 'logout'%}" role="button"><i class="far fa-address-book"></i>  Logout </a>
+                   
+                </li>
+                {% endif %}
             </ul>
             <ul class="topnav-right">
-                <!-- <li> <a class="mdonate" href="donation.html"><span>Make a Donation</span></a> </li>
+                <li> <a class="mdonate" href="donation.html"><span>Make a Donation</span></a> </li>
                 <li> <a class="search-icon" href="#search"> <i class="fas fa-search"></i> </a> </li>
                 <li class="dropdown">
                     <a class="cart-icon" data-toggle="dropdown" href="#" id="cartdropdown" role="button"> <i
@@ -163,7 +186,7 @@
                     <div class="total">Total: <strong>$44.95</strong></div>
                     <div class="view-link"><a href="#">Proceed to Checkout</a> <a href="#">View cart </a></div>
                     </div>
-                </li> -->
+                </li>
                 {% if not user.is_authenticated %}
                 <li class="login-reg"> <a href="{%url 'login'%}">Login</a> | <a href="{%url 'signup'%}">Signup</a>
                 </li>
@@ -171,6 +194,8 @@
                 <li class="login-reg"> <a href="{% url 'logout'%}">Logout</a>
                 </li>
                 {%endif%}
+                <li class="login-reg"> <a href="{% url 'logout'%}">Logout</a>
+                </li> 
             </ul>
         </div>
         </nav>
@@ -237,13 +262,13 @@
     </footer>
 </div>
 <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
-   <script src="{% static 'js/jquery-migrate-1.4.1.min.js' %}"></script>
-   <script src="{% static 'js/popper.min.js' %}"></script>
-   <script src="{% static 'js/bootstrap.min.js' %}"></script>
-   <script src="{% static 'js/owl.carousel.min.js' %}"></script>
-   <script src="{% static 'js/jquery.prettyPhoto.js' %}"></script>
-   <script src="{% static 'js/isotope.min.js' %}"></script>
-   <script src="{% static 'js/custom.js' %}"></script>
+<script src="{% static 'js/jquery-migrate-1.4.1.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/jquery.prettyPhoto.js' %}"></script>
+<script src="{% static 'js/isotope.min.js' %}"></script>
+<script src="{% static 'js/custom99.js' %}"></script>
 </body>
 
 </html>

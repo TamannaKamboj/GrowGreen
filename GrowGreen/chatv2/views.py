@@ -31,6 +31,7 @@ def test(request, room_name):
 # 3. To show the all the contacts list
 
 # step 1
+@login_required 
 def test0(request):
     obj = Chat.objects.filter(participants__user = request.user)
     # you can also use get_object_or_404 it is very easy to use as well

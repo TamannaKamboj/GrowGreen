@@ -6,14 +6,16 @@ It exposes the ASGI callable as a module-level variable named ``application``.
 For more information on this file, see
 https://docs.djangoproject.com/en/3.1/howto/deployment/asgi/
 """
-
+import django
+from asgiref.sync import sync_to_async
 import os
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'GrowGreen.settings')
 
 from channels.auth import AuthMiddlewareStack
 from channels.routing import ProtocolTypeRouter, URLRouter
 from django.core.asgi import get_asgi_application
 import chatv2.routing
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'GrowGreen.settings')
+# await sync_to_async(django.setup, thread_sensitive=True)()
 
 application = ProtocolTypeRouter({
     "http": get_asgi_application(),

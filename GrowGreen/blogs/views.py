@@ -48,7 +48,7 @@ def blog_post(request, post_id):
 		subject = request.POST.get('subject')
 		message = request.POST.get('message')
 		post = Post.objects.filter(sno = post_id).first()
-		obj=Comment(user = user, message = message, subject=subject, post=post, timestamp = datetime.datetime.strptime('2021-09-09 00:00:00','%Y-%m-%d %H:%M:%S'))
+		obj=Comment(user = user, message = message, subject=subject, post=post)
 		obj.save()
 		email = user.email
 		send_mail(

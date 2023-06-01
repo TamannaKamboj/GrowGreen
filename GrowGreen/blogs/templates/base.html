@@ -137,6 +137,23 @@
                         href="{%url 'contact'%}" role="button"><i class="far fa-address-book"></i>  Contact </a>
                    
                 </li>
+                {% if not user.is_authenticated %}
+                <li class="nav-item dropdown">
+                    <!-- <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" href="{%url 'contact'%}" role="button"> Contact </a> -->
+                    <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                        href="{%url 'login'%}" role="button"><i class="far fa-address-book"></i>  Login </a>
+                   
+                </li>
+                {% else %}
+                <li class="nav-item dropdown">
+                    <!-- <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                    data-toggle="dropdown" href="{%url 'contact'%}" role="button"> Contact </a> -->
+                    <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                        href="{%url 'logout'%}" role="button"><i class="far fa-address-book"></i>  Logout </a>
+                   
+                </li>
+                {% endif %}
             </ul>
             <ul class="topnav-right">
                 <!-- <li> <a class="mdonate" href="donation.html"><span>Make a Donation</span></a> </li>

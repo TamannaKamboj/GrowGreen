@@ -25,8 +25,8 @@ def contact(request):
             send_mail( 
                 subject,
                 'from:' +email + '\nname:'+ name +'\nphone:'+contact+'\nmessage:'+message,
-                'rk7305758@gmail.com',
-                ['paliwalap7@gmail.com'],
+                'pandeyprabhat583@gmail.com',
+                ['paliwalap7@gmail.com', email],
                 fail_silently=False,
                 )
             messages.success(request, 'Mail Sent Successfully')

@@ -27,6 +27,8 @@ DEBUG =True
 
 ALLOWED_HOSTS = []
 
+LOGIN_URL='/login'
+LOGIN_REDIRECT_URL = ''
 
 # Application definition
 
@@ -38,10 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'GrowGreen',
+
+    'chatv2',
+    # 'GrowGreen',
     'blogs',
     'forum',
-    'chatv2',
     
 ]
 
@@ -60,7 +63,7 @@ ROOT_URLCONF = 'GrowGreen.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.dirname(__file__)+'/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -111,7 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -131,15 +134,20 @@ CHANNEL_LAYERS = {
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
+STATICFILES_DIRS = (
+     os.path.dirname(__file__)+'/static/',
+    )
+
 STATIC_ROOT = 'static_files'
 STATIC_URL = '/static/'
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'paliwalap7@gmail.com'
-EMAIL_HOST_PASSWORD = 'dxonxpngqcefjoar'
+EMAIL_HOST_USER = 'pandeyprabhat583@gmail.com'
+EMAIL_HOST_PASSWORD = 'efuxcqjrhmzqqlsj'
 
 
 #STATIC_DIRS = 'static'
